@@ -1,4 +1,4 @@
-spring:
+ spring:
   application:
     name: CONFIG-SERVER
   cloud:
@@ -21,11 +21,8 @@ eureka:
 
 microservice:
   payment-service:
-     endpoints:
-        endpoints:
-            uri: http://PAYMENT-SERVICE/payment/doPayment
+    endpoints:
+      uri: http://localhost:9191/payment/doPayment  # Assuming PAYMENT-SERVICE runs on port 9191
   order-service:
-     endpoints:
-        endpoints:
-            uri: http://ORDER-SERVICE/order/doPayment
-          
+    endpoints:
+      uri: http://localhost:9192/order/doPayment    # Assuming ORDER-SERVICE runs on port 9192
